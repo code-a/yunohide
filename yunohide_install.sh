@@ -26,6 +26,8 @@ echo 'HiddenServicePort 443 127.0.0.1:443' >> /etc/tor/torrc
 
 echo "Restarting tor..."
 service tor restart
+echo "waiting for tor to generate hidden services(60s)"
+sleep 60
 # TODO: get password from user
 hidden_service_ssh="$(cat /var/lib/tor/hidden_service_ssh/hostname)"
 hidden_service_default="$(cat /var/lib/tor/hidden_service_default/hostname)"
