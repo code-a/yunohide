@@ -1,4 +1,10 @@
 # //TODO: Color output: https://misc.flogisoft.com/bash/tip_colors_and_formatting
+# //TODO: Close Ports TCP ipv4+ipv6+upnp: 22, 25, 53, 80, 443, 465, 587, 993, 5222, 5269
+# //TODO: Close Ports UDP ipv4+ipv6+upnp: 53, 5353
+# //TODO Example TCP ipv4: yunohost firewall disallow TCP 22 --ipv4-only --no-reload
+# //TODO Example TCP ipv6: yunohost firewall disallow TCP 22 --ipv6-only --no-reload
+# //TODO Example TCP upnp: yunohost firewall disallow TCP 22 --upnp-only --no-reload
+# //TODO: reload firewall after modification:  yunohost firewall reload
 
 # Get password for admin account
 echo "Enter the password you want to use for your yunohost admin account"
