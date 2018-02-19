@@ -76,6 +76,8 @@ echo "You need them to access your server from the internet!"
 echo "In the next step your system will be updated!"
 read -rsp $'Press enter to continue...\n'
 
+
+# //TODO: https://linuxconfig.org/how-to-upgrade-debian-8-jessie-to-debian-9-stretch
 # Second update/upgrade to upgrade yunohost
 echo "updating package list"
 apt-get update
