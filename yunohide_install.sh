@@ -29,7 +29,7 @@ fi
 
 # //TODO: change root password
 
-
+# //TODO: does this crash yunohost?
 # Update package list
 echo "updating package list"
 apt-get update
