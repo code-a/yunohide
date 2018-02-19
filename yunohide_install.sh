@@ -75,4 +75,5 @@ echo "updating package list"
 apt-get update
 
 echo "upgrading packages"
+apt-get install apt-transport-https
 apt-get upgrade
