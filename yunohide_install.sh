@@ -1,5 +1,5 @@
 # Get password for admin account
-echo "Enter the password you want to use for your admin account"
+echo "Enter the password you want to use for your yunohost admin account"
 read -s -p "Password: " PASSWORD; echo
 read -s -p "Confirm Password: " PASSCONFIRM; echo
 
@@ -8,6 +8,11 @@ if [[ "$PASSWORD" != "$PASSCONFIRM" ]]; then
  echo "Restart this script and try again!"
  exit -1
 fi
+
+# //TODO: change root password
+
+
+
 
 # Tor installation & hidden service creation
 echo "Installing tor..."
@@ -28,11 +33,14 @@ echo "Restarting tor..."
 service tor restart
 echo "waiting for tor to generate hidden services(60s)"
 sleep 60
-# TODO: get password from user
+
+echo "installing yunohost"
+chmod +x ./install_yunohost -a
+
 hidden_service_ssh="$(cat /var/lib/tor/hidden_service_ssh/hostname)"
 hidden_service_default="$(cat /var/lib/tor/hidden_service_default/hostname)"
 
-echo "Starting YunoHost installation..."
+echo "Starting YunoHost post-install..."
 yunohost tools post_install -d "$hidden_service_default" -p "$PASSWORD" --ignore-dyndns
 
 echo "Adding YunoHide AppsList"
