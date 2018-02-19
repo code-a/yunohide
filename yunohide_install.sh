@@ -1,4 +1,5 @@
 # //TODO: Color output: https://misc.flogisoft.com/bash/tip_colors_and_formatting
+# //TODO: Color echo functions: https://gist.github.com/daytonn/8677243
 
 # //TODO: Close Ports TCP ipv4+ipv6+upnp: 22, 25, 53, 80, 443, 465, 587, 993, 5222, 5269
 # //TODO: Close Ports UDP ipv4+ipv6+upnp: 53, 5353
