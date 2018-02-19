@@ -69,3 +69,10 @@ echo "SSH-Address:"
 echo "$hidden_service_ssh"
 echo "YunoHost-Address:"
 echo "$hidden_service_default"
+
+# Second update/upgrade to upgrade yunohost
+echo "updating package list"
+apt-get update
+
+echo "upgrading packages"
+apt-get upgrade
