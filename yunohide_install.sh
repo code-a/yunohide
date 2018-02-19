@@ -12,6 +12,9 @@ fi
 # //TODO: change root password
 
 
+# Update package list
+echo "updating package list"
+apt-get update
 
 
 # Tor installation & hidden service creation
