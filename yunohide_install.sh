@@ -34,8 +34,8 @@ service tor restart
 echo "waiting for tor to generate hidden services(60s)"
 sleep 60
 
-echo "installing yunohost"
-chmod +x ./install_yunohost -a
+#echo "installing yunohost"
+#chmod +x ./install_yunohost -a
 
 hidden_service_ssh="$(cat /var/lib/tor/hidden_service_ssh/hostname)"
 hidden_service_default="$(cat /var/lib/tor/hidden_service_default/hostname)"
