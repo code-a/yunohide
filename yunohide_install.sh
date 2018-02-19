@@ -1,3 +1,5 @@
+# //TODO: Color output: https://misc.flogisoft.com/bash/tip_colors_and_formatting
+
 # Get password for admin account
 echo "Enter the password you want to use for your yunohost admin account"
 read -s -p "Password: " PASSWORD; echo
@@ -36,9 +38,6 @@ echo "Restarting tor..."
 service tor restart
 echo "waiting for tor to generate hidden services(60s)"
 sleep 60
-
-#echo "installing yunohost"
-#chmod +x ./install_yunohost -a
 
 hidden_service_ssh="$(cat /var/lib/tor/hidden_service_ssh/hostname)"
 hidden_service_default="$(cat /var/lib/tor/hidden_service_default/hostname)"
