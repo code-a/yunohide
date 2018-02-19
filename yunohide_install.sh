@@ -12,6 +12,8 @@
 
 # //TODO: automatic "Y" for tor packet installation
 
+# //TODO: change hostname for avahi zeroconf
+
 # Get password for admin account
 echo "Enter the password you want to use for your yunohost admin account and the root user"
 read -s -p "Password: " PASSWORD; echo
