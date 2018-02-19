@@ -32,6 +32,9 @@ fi
 echo "updating package list"
 apt-get update
 
+echo "upgrading packages"
+apt-get upgrade
+
 
 # Tor installation & hidden service creation
 echo "Installing tor..."
