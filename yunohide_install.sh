@@ -82,16 +82,14 @@ echo "In the next step your system will be updated!"
 read -rsp $'Press enter to continue...\n'
 
 
-# //TODO: https://linuxconfig.org/how-to-upgrade-debian-8-jessie-to-debian-9-stretch
 # Second update/upgrade to upgrade yunohost
-echo "updating package list"
-apt-get update
+#echo "updating package list"
+#apt-get update
 
-echo "upgrading packages"
-apt-get install apt-transport-https
-apt-get upgrade --fix-missing
-
-#//TODO: reload all services
+#echo "upgrading packages"
+# //TODO: let user update system using webpanel
+#apt-get install apt-transport-https
+#apt-get upgrade --fix-missing
 
 
 
