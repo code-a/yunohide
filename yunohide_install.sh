@@ -14,6 +14,8 @@
 
 # //TODO: change hostname for avahi zeroconf
 
+# //TODO: start tor after boot: https://www.raspberrypi.org/forums/viewtopic.php?f=28&t=197052&p=1231906#p1231634
+
 # Get password for admin account
 echo "Enter the password you want to use for your yunohost admin account and the root user"
 read -s -p "Password: " PASSWORD; echo
