@@ -8,10 +8,12 @@
 # //TODO Example TCP upnp: yunohost firewall disallow TCP 22 --upnp-only --no-reload
 # //TODO: reload firewall after modification:  yunohost firewall reload
 
+# //TODO: change root pw: echo root:$2 | chpasswd
+
 # //TODO: automatic "Y" for tor packet installation
 
 # Get password for admin account
-echo "Enter the password you want to use for your yunohost admin account"
+echo "Enter the password you want to use for your yunohost admin account and the root user"
 read -s -p "Password: " PASSWORD; echo
 read -s -p "Confirm Password: " PASSCONFIRM; echo
 
