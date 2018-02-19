@@ -34,3 +34,7 @@ echo "Starting YunoHost installation..."
 yunohost tools post_install -d "$hidden_service_default" -p "$PASSWORD" --ignore-dyndns
 
 echo "Adding YunoHide AppsList"
+echo "SSH-Address:"
+echo "$hidden_service_ssh"
+echo "YunoHost-Address:"
+echo "$hidden_service_default"
