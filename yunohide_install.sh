@@ -43,6 +43,8 @@ hidden_service_default="$(cat /var/lib/tor/hidden_service_default/hostname)"
 echo "Starting YunoHost post-install..."
 yunohost tools post_install -d "$hidden_service_default" -p "$PASSWORD" --ignore-dyndns
 
+# //TODO: update firewall settings
+
 echo "Adding YunoHide AppsList"
 echo "SSH-Address:"
 echo "$hidden_service_ssh"
