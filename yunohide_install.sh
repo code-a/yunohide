@@ -70,6 +70,12 @@ echo "$hidden_service_ssh"
 echo "YunoHost-Address:"
 echo "$hidden_service_default"
 
+# Start update after user has written down the infos
+echo "Please copy and save the addresses shown above."
+echo "You need them to access your server from the internet!"
+echo "In the next step your system will be updated!"
+read -rsp $'Press enter to continue...\n'
+
 # Second update/upgrade to upgrade yunohost
 echo "updating package list"
 apt-get update
