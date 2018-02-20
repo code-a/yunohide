@@ -27,6 +27,7 @@ YunoHide configures a fresh installed YunoHost to serve all services as tor hidd
 
 ## Preparation
 Insert the SD-card into your computer and create an empty file with filename **ssh** in the boot partition.
+
 **Note:** The file **MUST NOT** have a filename-extension
 
 ## Boot your Pi
