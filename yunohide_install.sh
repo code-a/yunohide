@@ -100,15 +100,15 @@ yunohost firewall disallow TCP 5269 --ipv6-only --no-reload
 
 echo_n "Updating firewall rules: pnpp+TCP"
 #yunohost firewall disallow TCP 22 --pnpp-only --no-reload
-yunohost firewall disallow TCP 25 --pnpp-only --no-reload
-yunohost firewall disallow TCP 53 --pnpp-only --no-reload
-yunohost firewall disallow TCP 80 --pnpp-only --no-reload
-yunohost firewall disallow TCP 443 --pnpp-only --no-reload
-yunohost firewall disallow TCP 465 --pnpp-only --no-reload
-yunohost firewall disallow TCP 587 --pnpp-only --no-reload
-yunohost firewall disallow TCP 993 --pnpp-only --no-reload
-yunohost firewall disallow TCP 5222 --pnpp-only --no-reload
-yunohost firewall disallow TCP 5269 --pnpp-only --no-reload
+yunohost firewall disallow TCP 25 --upnp-only --no-reload
+yunohost firewall disallow TCP 53 --upnp-only --no-reload
+yunohost firewall disallow TCP 80 --upnp-only --no-reload
+yunohost firewall disallow TCP 443 --upnp-only --no-reload
+yunohost firewall disallow TCP 465 --upnp-only --no-reload
+yunohost firewall disallow TCP 587 --upnp-only --no-reload
+yunohost firewall disallow TCP 993 --upnp-only --no-reload
+yunohost firewall disallow TCP 5222 --upnp-only --no-reload
+yunohost firewall disallow TCP 5269 --upnp-only --no-reload
 
 echo_n "Updating firewall rules: IPv4+UDP"
 yunohost firewall disallow UDP 53 --ipv4-only --no-reload
