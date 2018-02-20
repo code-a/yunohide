@@ -14,7 +14,7 @@ function echo_n {
     echo -e "${PURPLE}${1}${NC}"
 }
 
-function echo_green {
+function echo_g {
     echo -e "${GREEN}${1}${NC}"
 }
 
@@ -39,6 +39,9 @@ apt-get -y update
 
 echo_n "upgrading packages"
 apt-get -y upgrade
+echo_n "dist-upgrade"
+apt-get -y dist-upgrade
+
 
 echo_n "Installing apt-transport-https"
 apt-get install apt-transport-https
