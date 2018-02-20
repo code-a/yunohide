@@ -1,14 +1,10 @@
-# //TODO: Color output: https://misc.flogisoft.com/bash/tip_colors_and_formatting
-# //TODO: Color echo functions: https://gist.github.com/daytonn/8677243
-
-
-# //TODO: automatic "Y" for tor packet installation
-
 # //TODO: change hostname for avahi zeroconf
 
 # //TODO: start tor after boot: https://www.raspberrypi.org/forums/viewtopic.php?f=28&t=197052&p=1231906#p1231634
 
 # Echo functions
+# source: https://misc.flogisoft.com/bash/tip_colors_and_formatting
+# source2: https://gist.github.com/daytonn/8677243
 RED='\033[0;31m'
 PURPLE="\033[0;35m"
 GREEN="\033[0;32m"
@@ -33,7 +29,7 @@ if [[ "$PASSWORD" != "$PASSCONFIRM" ]]; then
  exit -1
 fi
 
-# //TODO: change root password
+# //change root password
 echo root:$PASSWORD | chpasswd
 
 # //TODO: does this crash yunohost? Is it needed?
@@ -49,7 +45,7 @@ apt-get install apt-transport-https
 
 # Tor installation & hidden service creation
 echo_n "Installing tor..."
-sudo apt-get install tor
+sudo apt-get -y install tor
 
 echo_n "Creating hidden service for ssh access..."
 echo '# Hidden service for ssh' >> /etc/tor/torrc
