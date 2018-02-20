@@ -7,8 +7,10 @@ YunoHide configures a fresh installed YunoHost to serve all services as tor hidd
 - [x] Install tor
 - [x] Configure default hidden service for YunoHost apps
 - [x] Configure hidden service for ssh access
-- [ ] Change root password
-- [ ] Close firewall ports
+- [x] Change root password
+- [x] Set YunoHost Admin password
+- [x] Configure YunoHost(postinstall)
+- [x] Close firewall ports
 
 **Tested YunoHost version:**
 
