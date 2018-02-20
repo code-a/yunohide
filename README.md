@@ -21,10 +21,16 @@ YunoHide configures a fresh installed YunoHost to serve all services as tor hidd
 ## Requirements
 
   * Raspberry Pi(version 3 is recommended)
-  * MicroSD-Card with [YunoHost Pi image](https://build.yunohost.org/yunohost-jessie-201701261126-sdraspi-stable.zip) installed
+  * MicroSD-Card flashed with [YunoHost Pi image](https://build.yunohost.org/yunohost-jessie-201701261126-sdraspi-stable.zip)
 
 # Installation
+
+## Preparation
+Insert the SD-card into your computer and create an empty file with filename **ssh** in the boot partition.
+**Note:** The file **MUST NOT** have a filename-extension
+
 ## Boot your Pi
+  - Insert the SD-card into your raspberry pi
   - Boot your raspberry pi connected to your router
   - Wait 10 minutes to give the pi time to setup correctly
 
