@@ -11,6 +11,7 @@ YunoHide configures a fresh installed YunoHost to serve all services as tor hidd
 - [x] Set YunoHost Admin password
 - [x] Configure YunoHost(postinstall)
 - [x] Close firewall ports
+- [ ] Allow port 9001
 
 **Tested YunoHost version:**
 
