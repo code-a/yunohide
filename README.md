@@ -38,7 +38,7 @@ Connect to the pi using it's IP:
 
 **Password:** The root password is **yunohost**.
 
-## Install YunoHost
+## Install YunoHide
 After you have connected to your raspberry pi, run the following commands in your SSH session:
 
     wget https://github.com/nebulak/yunohide/raw/master/yunohide_install.sh
