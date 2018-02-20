@@ -17,8 +17,7 @@ YunoHide configures a fresh installed YunoHost to serve all services as tor hidd
   * yunohost-jessie-201701261126-sdraspi-stable.zip
     * YunoHost_v251_rpi.img
 
-# Installation
-## Requirements
+# Requirements
 
   * Raspberry Pi(version 3 is recommended)
   * MicroSD-Card flashed with [YunoHost Pi image](https://build.yunohost.org/yunohost-jessie-201701261126-sdraspi-stable.zip)
