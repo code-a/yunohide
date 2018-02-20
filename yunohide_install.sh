@@ -35,10 +35,10 @@ echo root:$PASSWORD | chpasswd
 # //TODO: does this crash yunohost? Is it needed?
 # Update package list
 echo_n "updating package list"
-apt-get update
+apt-get -y update
 
 echo_n "upgrading packages"
-apt-get upgrade
+apt-get -y upgrade
 
 echo_n "Installing apt-transport-https"
 apt-get install apt-transport-https
