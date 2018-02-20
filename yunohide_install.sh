@@ -128,6 +128,9 @@ yunohost firewall reload
 
 
 # //TODO: echo_n "Adding YunoHide AppsList"
+
+echo_g "\n\n\n###################################################"
+echo_n "Finished YunoHide installation!\n"
 echo_n "SSH-Address:"
 echo_n "$hidden_service_ssh"
 echo_n "YunoHost-Address:"
@@ -137,6 +140,7 @@ echo_n "$hidden_service_default"
 echo_n "Please copy and save the addresses shown above."
 echo_n "You need them to access your server from the internet!"
 read -rsp $'Press enter to continue...\n'
+echo_g "###################################################"
 
 
 # Second update/upgrade to upgrade yunohost
