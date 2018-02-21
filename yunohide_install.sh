@@ -2,7 +2,7 @@
 
 # //TODO: start tor after boot: https://www.raspberrypi.org/forums/viewtopic.php?f=28&t=197052&p=1231906#p1231634
 
-# Echo functions
+############################## HELPER FUNCTIONS ####################################
 # source: https://misc.flogisoft.com/bash/tip_colors_and_formatting
 # source2: https://gist.github.com/daytonn/8677243
 RED='\033[0;31m'
@@ -18,8 +18,9 @@ function echo_g {
     echo -e "${GREEN}${1}${NC}"
 }
 
+############################## PASSWORD SETUP ####################################
 # Get password for admin account
-echo "Enter the password you want to use for your yunohost admin account and the root user"
+echo_n "Enter the password you want to use for your yunohost admin account and the root user"
 read -s -p "Password: " PASSWORD; echo
 read -s -p "Confirm Password: " PASSCONFIRM; echo
 
@@ -32,7 +33,8 @@ fi
 # //change root password
 echo root:$PASSWORD | chpasswd
 
-# //TODO: does this crash yunohost? Is it needed?
+
+############################## SYSTEM UPDATE ####################################
 # Update package list
 echo_n "updating package list"
 apt-get -y update
@@ -46,6 +48,8 @@ apt-get -y dist-upgrade
 echo_n "Installing apt-transport-https"
 apt-get install apt-transport-https
 
+
+############################## HIDDEN SERVICE CONFIGURATION ####################################
 # Tor installation & hidden service creation
 echo_n "Installing tor..."
 sudo apt-get -y install tor
@@ -69,9 +73,12 @@ sleep 60
 hidden_service_ssh="$(cat /var/lib/tor/hidden_service_ssh/hostname)"
 hidden_service_default="$(cat /var/lib/tor/hidden_service_default/hostname)"
 
+
+############################## YUNOHOST POSTINSTALL ####################################
 echo_n "Starting YunoHost post-install..."
 yunohost tools postinstall -d "$hidden_service_default" -p "$PASSWORD" --ignore-dyndns
 
+############################## FIREWALL UPDATE ####################################
 # update firewall settings
 echo_n "Updating firewall rules..."
 echo_n "Updating firewall rules: IPv4+TCP"
@@ -128,18 +135,18 @@ yunohost firewall reload
 
 # //TODO: echo_n "Adding YunoHide AppsList"
 
+############################## SERVER INFO ####################################
 echo_g "\n\n\n###################################################"
 echo_n "Finished YunoHide installation!\n"
 echo_n "SSH-Address:"
 echo_n "$hidden_service_ssh"
 echo_n "YunoHost-Address:"
 echo_n "$hidden_service_default"
-
-# Start update after user has written down the infos
 echo_n "Please copy and save the addresses shown above."
 echo_n "You need them to access your server from the internet!"
-read -rsp $'Press enter to continue...\n'
-echo_g "###################################################"
+echo_g "###################################################\n\n"
+read -rsp $'Press enter to finish setup...\n'
+
 
 
 # Second update/upgrade to upgrade yunohost
