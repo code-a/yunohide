@@ -39,10 +39,11 @@ echo root:$PASSWORD | chpasswd
 echo_n "updating package list"
 apt-get -y update
 
-echo_n "upgrading packages"
-apt-get -y upgrade
-echo_n "dist-upgrade"
-apt-get -y dist-upgrade
+# //TODO: upgrade
+#echo_n "upgrading packages"
+#apt-get -y upgrade
+#echo_n "dist-upgrade"
+#apt-get -y dist-upgrade
 
 
 echo_n "Installing apt-transport-https"
