@@ -11,7 +11,11 @@ YunoHide configures a fresh installed YunoHost to serve all services as tor hidd
 - [x] Set YunoHost Admin password
 - [x] Configure YunoHost(postinstall)
 - [x] Close firewall ports
-- [ ] Allow port 9001
+- [ ] ~~Allow port 9001~~
+- [ ] Nextcloud Client Config tutorial
+- [ ] Hidden service ports: SMTP, IMAP, POP3, XMPP
+- 
+
 
 **Tested YunoHost version:**
 
