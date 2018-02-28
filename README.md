@@ -14,6 +14,8 @@ YunoHide configures a fresh installed YunoHost to serve all services as tor hidd
   - [ ] Except Port 22 for ssh
 - [ ] ~~Allow port 9001~~
 - [ ] Mailserver
+  - [ ] [Torify Postfix](https://www.void.gr/kargig/blog/2014/05/10/smtp-over-hidden-services-with-postfix/)
+  - [ ] [Anonymize Headers](https://www.void.gr/kargig/blog/2013/11/24/anonymize-headers-in-postfix/)
   - [ ] Hidden service ports: SMTP, IMAP, POP3
 - [ ] XMPP-Server
   - [ ] Hidden service ports: XMPP
