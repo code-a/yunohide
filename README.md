@@ -13,12 +13,16 @@ YunoHide configures a fresh installed YunoHost to serve all services as tor hidd
 - [x] Close firewall ports
   - [ ] Except Port 22 for ssh
 - [ ] ~~Allow port 9001~~
-- [ ] Cryptpad with own hidden service domain
 - [ ] Mailserver
   - [ ] Hidden service ports: SMTP, IMAP, POP3
 - [ ] XMPP-Server
   - [ ] Hidden service ports: XMPP
-- [ ] WifiHotspot with \*.local domain
+- [ ] Own AppsList
+  - [ ] Nextcloud with encryption enabled
+  - [ ] Cryptpad with own hidden service domain
+  - [ ] WifiHotspot with \*.local domain
+- [ ] YunoHide Moulinette Functions
+- [ ] YunoHide-Admin
 
 
 
