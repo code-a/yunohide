@@ -24,6 +24,10 @@ YunoHide configures a fresh installed YunoHost to serve all services as tor hidd
   - [ ] Cryptpad with own hidden service domain
   - [ ] WifiHotspot with \*.local domain
 - [ ] YunoHide Moulinette Functions
+  - [ ] hiddenservice_add (name, ports[])
+  - [ ] hiddenservice_list (returns: (domain, name, ports[]))
+  - [ ] hiddenservice_update (domain, name, ports[])
+  - [ ] hiddenservice_delete (domain)
 - [ ] YunoHide-Admin
 
 
