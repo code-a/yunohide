@@ -16,6 +16,7 @@ YunoHide configures a fresh installed YunoHost to serve all services as tor hidd
 - [ ] Mailserver
   - [ ] [Torify Postfix](https://www.void.gr/kargig/blog/2014/05/10/smtp-over-hidden-services-with-postfix/)
   - [ ] [Anonymize Headers](https://www.void.gr/kargig/blog/2013/11/24/anonymize-headers-in-postfix/)
+  - [ ] [Only accept onion domains](https://www.linuxquestions.org/questions/linux-server-73/how-to-reject-addresses-by-tld-in-postfix-678757/)
   - [ ] Hidden service ports: SMTP, IMAP, POP3
 - [ ] XMPP-Server
   - [ ] Hidden service ports: XMPP
