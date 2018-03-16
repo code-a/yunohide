@@ -2,7 +2,7 @@
 
 YunoHide configures a fresh installed YunoHost to serve all services as tor hidden services.
 
-Version: 0.0.1
+Version: 0.1.0
 
 # Features
   * Apps
@@ -22,7 +22,7 @@ Version: 0.0.1
     * Closes all Firewall ports except 22 for local network access
 
 # Roadmap
-## Version 0.0.1
+## Version 0.1.0
 - [x] Install tor
 - [x] Configure default hidden service for YunoHost apps
 - [x] Configure hidden service for ssh access
@@ -32,7 +32,7 @@ Version: 0.0.1
 - [x] Close firewall ports
   - [ ] Except Port 22 for ssh
 
-## Version 0.0.2
+## Version 0.2.0
 - [ ] Mailserver
   - [ ] [Torify Postfix](https://www.void.gr/kargig/blog/2014/05/10/smtp-over-hidden-services-with-postfix/)
   - [ ] [Anonymize Headers](https://www.void.gr/kargig/blog/2013/11/24/anonymize-headers-in-postfix/)
@@ -43,7 +43,7 @@ Version: 0.0.1
 - [x] XMPP-Server
   - [x] Hidden service ports: XMPP
 
-## Version 0.0.3
+## Version 0.3.0
 - [ ] Own AppsList
   - [ ] Nextcloud with encryption enabled
   - [ ] Cryptpad with own hidden service domain
