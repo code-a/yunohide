@@ -76,6 +76,12 @@ echo 'HiddenServicePort 993 127.0.0.1:993' >> /etc/tor/torrc
 echo 'HiddenServicePort 5222 127.0.0.1:5222' >> /etc/tor/torrc
 echo 'HiddenServicePort 5269 127.0.0.1:5269' >> /etc/tor/torrc
 
+# Cryptpad hidden service setup
+echo_n "Creating default hidden service for CryptPad..."
+echo '# Hidden service for Cryptpad' >> /etc/tor/torrc
+echo 'HiddenServiceDir  /var/lib/tor/hidden_service_cryptpad/' >> /etc/tor/torrc
+echo 'HiddenServicePort 80 127.0.0.1:80' >> /etc/tor/torrc
+echo 'HiddenServicePort 443 127.0.0.1:443' >> /etc/tor/torrc
 
 echo_n "Restarting tor..."
 service tor restart
@@ -146,6 +152,9 @@ yunohost firewall reload
 
 
 # //TODO: echo_n "Adding YunoHide AppsList"
+# //TODO: install nextcloud+encryption
+# //TODO: install cryptpad
+# //TODO: mailserver configuration
 
 ############################## SERVER INFO ####################################
 echo_g "\n\n\n###################################################"
