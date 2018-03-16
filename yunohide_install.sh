@@ -90,6 +90,7 @@ sleep 60
 
 hidden_service_ssh="$(cat /var/lib/tor/hidden_service_ssh/hostname)"
 hidden_service_default="$(cat /var/lib/tor/hidden_service_default/hostname)"
+hidden_service_cryptpad="$(cat /var/lib/tor/hidden_service_cryptpad/hostname)"
 
 
 ############################## YUNOHOST POSTINSTALL ####################################
