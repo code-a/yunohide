@@ -5,10 +5,16 @@ YunoHide configures a fresh installed YunoHost to serve all services as tor hidd
 Version: 0.0.1
 
 # Features
+  * Apps
+    * [ ] Nextcloud
+    * [ ] Cryptpad
+    * [ ] Mailserver
+    * [ ] XMPP-Server
+    * [ ] Web-Interface
   * Automatic configuration of 3 hidden services
-    * Main
-    * SSH
-    * Cryptpad
+    * [x] Main
+    * [x] SSH
+    * [ ] Cryptpad
   * Secure setup
     * Change root password
     * login using tor
