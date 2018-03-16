@@ -33,6 +33,9 @@ Version: 0.1.0
   - [ ] Except Port 22 for ssh
 
 ## Version 0.2.0
+- [ ] Install on clean debian jessie image
+  - [ ] use with -a option: https://github.com/YunoHost/install_script/blob/master/install_yunohost
+  - [ ] postinstall
 - [ ] Mailserver
   - [ ] [Torify Postfix](https://www.void.gr/kargig/blog/2014/05/10/smtp-over-hidden-services-with-postfix/)
   - [ ] [Anonymize Headers](https://www.void.gr/kargig/blog/2013/11/24/anonymize-headers-in-postfix/)
