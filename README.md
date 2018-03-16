@@ -34,6 +34,7 @@ Version: 0.1.0
 
 ## Version 0.2.0
 - [ ] Install on clean debian jessie image
+  - [ ] prepare image(Manual installation): https://yunohost.org/#/install_on_raspberry
   - [ ] use with -a option: https://github.com/YunoHost/install_script/blob/master/install_yunohost
   - [ ] postinstall
 - [ ] Mailserver
