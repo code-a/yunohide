@@ -1,9 +1,21 @@
 # YunoHide
 
 YunoHide configures a fresh installed YunoHost to serve all services as tor hidden services.
+
 Version: 0.0.1
 
 # Features
+  * Automatic configuration of 3 hidden services
+    * Main
+    * SSH
+    * Cryptpad
+  * Secure setup
+    * Change root password
+    * login using tor
+    * Automatic YunoHost postinstall
+    * Closes all Firewall ports except 22 for local network access
+
+# Roadmap
 ## Version 0.0.1
 - [x] Install tor
 - [x] Configure default hidden service for YunoHost apps
