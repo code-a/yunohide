@@ -155,8 +155,15 @@ yunohost firewall reload
 wget https://github.com/code-a/yunohide/raw/master/yunohost.conf
 cp ./yunohost.conf /etc/yunohost/yunohost.conf
 
-# configure mailserver
-# //TODO: 
+# configure mailserver for internal use
+# source: https://www.bentasker.co.uk/documentation/linux/161-configuring-postfix-to-block-outgoing-mail-to-all-but-one-domain
+echo 'transport_maps = hash:/etc/postfix/transport' >> /etc/postfix/main.cf
+hs_transport="$hidden_service_dir"' :'
+echo hs_transport >> /etc/postfix/transport
+echo '* error: domain not allowed' >> /etc/postfix/transport
+postmap /etc/postfix/transport
+systemctl reload postfix
+
 
 # //TODO: echo_n "Adding YunoHide AppsList"
 # //TODO: install nextcloud+encryption
