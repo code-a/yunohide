@@ -8,8 +8,8 @@ Version: 0.1.0
   * Apps
     * [ ] Nextcloud
     * [ ] Cryptpad
-    * [ ] Mailserver
-    * [ ] XMPP-Server
+    * [x] Mailserver
+    * [x] XMPP-Server
     * [ ] Web-Interface
   * Automatic configuration of 3 hidden services
     * [x] Main
@@ -34,17 +34,20 @@ Version: 0.1.0
 
 ## Version 0.2.0
 - [x] Allow custom service configuration(using yunohost.conf)
-- [ ] Mailserver
-  - [ ] [Torify Postfix](https://www.void.gr/kargig/blog/2014/05/10/smtp-over-hidden-services-with-postfix/)
-  - [ ] [Anonymize Headers](https://www.void.gr/kargig/blog/2013/11/24/anonymize-headers-in-postfix/)
-  - [ ] [Only accept onion domains as receivers](https://www.linuxquestions.org/questions/linux-server-73/how-to-reject-addresses-by-tld-in-postfix-678757/)
-    * https://www.bentasker.co.uk/documentation/linux/161-configuring-postfix-to-block-outgoing-mail-to-all-but-one-domain
-    * http://www.linuxmail.info/postfix-restrict-sender-recipient/
+- [x] Mailserver for internal use
+  - [x] ~~Anonymize Headers~~: Users can only access mailserver using tor
+  - [x] Only Recipients at server allowed
   - [x] Hidden service ports: SMTP, IMAP, POP3
 - [x] XMPP-Server
   - [x] Hidden service ports: XMPP
 
 ## Version 0.3.0
+- [ ] Mailserver for "public" use
+  - [ ] [Torify Postfix](https://www.void.gr/kargig/blog/2014/05/10/smtp-over-hidden-services-with-postfix/)
+  - [ ] [Anonymize Headers](https://www.void.gr/kargig/blog/2013/11/24/anonymize-headers-in-postfix/)
+  - [ ] [Only accept onion domains as receivers](https://www.linuxquestions.org/questions/linux-server-73/how-to-reject-addresses-by-tld-in-postfix-678757/)
+    * https://www.bentasker.co.uk/documentation/linux/161-configuring-postfix-to-block-outgoing-mail-to-all-but-one-domain
+    * http://www.linuxmail.info/postfix-restrict-sender-recipient/
 - [ ] Own AppsList
   - [ ] Nextcloud with encryption enabled
   - [ ] Cryptpad with own hidden service domain
