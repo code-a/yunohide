@@ -151,6 +151,12 @@ yunohost firewall disallow UDP 5353 --upnp-only --no-reload
 echo_n "Reloading firewall configuration"
 yunohost firewall reload
 
+# use own service configuration
+wget https://github.com/code-a/yunohide/raw/master/yunohost.conf
+cp ./yunohost.conf /etc/yunohost/yunohost.conf
+
+# configure mailserver
+# //TODO: 
 
 # //TODO: echo_n "Adding YunoHide AppsList"
 # //TODO: install nextcloud+encryption
