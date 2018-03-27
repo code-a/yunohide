@@ -158,7 +158,7 @@ cp ./yunohost.conf /etc/yunohost/yunohost.conf
 # configure mailserver for internal use
 # source: https://www.bentasker.co.uk/documentation/linux/161-configuring-postfix-to-block-outgoing-mail-to-all-but-one-domain
 echo 'transport_maps = hash:/etc/postfix/transport' >> /etc/postfix/main.cf
-hs_transport="$hidden_service_dir"' :'
+hs_transport="$hidden_service_default"' :'
 echo hs_transport >> /etc/postfix/transport
 echo '* error: domain not allowed' >> /etc/postfix/transport
 postmap /etc/postfix/transport
