@@ -1,4 +1,6 @@
 # Update
+
+# Manual update needed...
 # Email Ports
 echo 'HiddenServicePort 25 127.0.0.1:25' >> /etc/tor/torrc
 echo 'HiddenServicePort 465 127.0.0.1:465' >> /etc/tor/torrc
@@ -16,9 +18,22 @@ echo 'HiddenServiceDir  /var/lib/tor/hidden_service_cryptpad/' >> /etc/tor/torrc
 echo 'HiddenServicePort 80 127.0.0.1:80' >> /etc/tor/torrc
 echo 'HiddenServicePort 443 127.0.0.1:443' >> /etc/tor/torrc
 
-echo_n "Restarting tor..."
+echo_n "Reloading tor..."
 echo_n "Your connection might break now..."
-echo_n "Continue with yunohide_update_to_0_1_0_step2.sh afterwards"
-service tor restart
+systemctl reload tor
 echo_n "waiting for tor to generate hidden services(60s)"
 sleep 60
+
+# use own service configuration
+wget https://github.com/code-a/yunohide/raw/master/yunohost.conf
+cp ./yunohost.conf /etc/yunohost/yunohost.conf
+
+# configure mailserver for internal use
+# source: https://www.bentasker.co.uk/documentation/linux/161-configuring-postfix-to-block-outgoing-mail-to-all-but-one-domain
+hidden_service_default="$(cat /var/lib/tor/hidden_service_default/hostname)"
+echo 'transport_maps = hash:/etc/postfix/transport' >> /etc/postfix/main.cf
+hs_transport="$hidden_service_default"' :'
+echo hs_transport >> /etc/postfix/transport
+echo '* error: domain not allowed' >> /etc/postfix/transport
+postmap /etc/postfix/transport
+systemctl reload postfix
