@@ -49,7 +49,11 @@ Version: 0.1.0
     * https://www.bentasker.co.uk/documentation/linux/161-configuring-postfix-to-block-outgoing-mail-to-all-but-one-domain
     * http://www.linuxmail.info/postfix-restrict-sender-recipient/
 - [ ] Own AppsList
-  - [ ] Nextcloud with encryption enabled
+  - [ ] Nextcloud 
+    - [ ] with encryption enabled
+    - [ ] with versioning disabled
+    - [ ] with previews disabled: https://docs.nextcloud.com/server/10/admin_manual/configuration_server/config_sample_php_parameters.html#previews
+    - [ ] with send_mail disabled
   - [ ] Cryptpad with own hidden service domain
   - [ ] WifiHotspot with \*.local domain
 - [ ] YunoHide Moulinette Functions
