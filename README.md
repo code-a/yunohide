@@ -32,7 +32,7 @@ Version: 0.1.0
 - [x] Close firewall ports
   - [ ] Except Port 22 for ssh
 
-## Version 0.2.0
+## Version 0.2.0 - April 2018
 - [x] Allow custom service configuration(using yunohost.conf)
 - [x] Mailserver for internal use
   - [x] ~~Anonymize Headers~~: Users can only access mailserver using tor
@@ -41,11 +41,10 @@ Version: 0.1.0
 - [x] XMPP-Server
   - [x] Hidden service ports: XMPP
 
-## Version 0.3.0
+## Version 0.3.0 - Mai 2018
 - [ ] Mailserver for "public" use
   - [ ] [Torify Postfix](https://www.void.gr/kargig/blog/2014/05/10/smtp-over-hidden-services-with-postfix/)
   - [ ] [Anonymize Headers](https://www.void.gr/kargig/blog/2013/11/24/anonymize-headers-in-postfix/)
-  - [ ] [Only accept onion domains as receivers](https://www.linuxquestions.org/questions/linux-server-73/how-to-reject-addresses-by-tld-in-postfix-678757/)
     * https://www.bentasker.co.uk/documentation/linux/161-configuring-postfix-to-block-outgoing-mail-to-all-but-one-domain
     * http://www.linuxmail.info/postfix-restrict-sender-recipient/
 - [ ] Own AppsList
@@ -55,13 +54,20 @@ Version: 0.1.0
     - [ ] with previews disabled: https://docs.nextcloud.com/server/10/admin_manual/configuration_server/config_sample_php_parameters.html#previews
     - [ ] with send_mail disabled
   - [ ] Cryptpad with own hidden service domain
-  - [ ] WifiHotspot with \*.local domain
+- [ ] YunoHide-Admin
+- [ ] Debian stretch support
+  
+## Future
 - [ ] YunoHide Moulinette Functions
   - [ ] hiddenservice_add (name, ports[])
   - [ ] hiddenservice_list (returns: (domain, name, ports[]))
   - [ ] hiddenservice_update (domain, name, ports[])
   - [ ] hiddenservice_delete (domain)
-- [ ] YunoHide-Admin
+- [ ] Mailserver for "public" use
+  - [ ] [Only accept onion domains as receivers](https://www.linuxquestions.org/questions/linux-server-73/how-to-reject-addresses-by-tld-in-postfix-678757/)
+    * https://www.bentasker.co.uk/documentation/linux/161-configuring-postfix-to-block-outgoing-mail-to-all-but-one-domain
+    * http://www.linuxmail.info/postfix-restrict-sender-recipient/
+- [ ] WifiHotspot with \*.local domain
 
 
 
