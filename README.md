@@ -9,7 +9,9 @@ Version: 0.1.0
     * [ ] Nextcloud
     * [ ] Cryptpad
     * [x] Mailserver
-    * [x] XMPP-Server
+    * [ ] XMPP-Server
+    * [ ] Zerobin
+    * [ ] Custom Web-Apps
     * [ ] Web-Interface
   * Automatic configuration of 3 hidden services
     * [x] Main
@@ -40,6 +42,7 @@ Version: 0.1.0
   - [x] Hidden service ports: SMTP, IMAP, POP3
 - [x] XMPP-Server
   - [x] Hidden service ports: XMPP
+  - [ ] mod_onions
 
 ## Version 0.3.0 - Mai 2018
 - [ ] Mailserver for "public" use
@@ -54,20 +57,27 @@ Version: 0.1.0
     - [ ] with previews disabled: https://docs.nextcloud.com/server/10/admin_manual/configuration_server/config_sample_php_parameters.html#previews
     - [ ] with send_mail disabled
   - [ ] Cryptpad with own hidden service domain
+- [ ] Full disk encryption
+  - [ ] Unlocking using ssh as hidden service
+
+
+## Version 0.4.0
 - [ ] YunoHide-Admin
 - [ ] Debian stretch support
-  
-## Future
+
+## Version 0.5.0
 - [ ] YunoHide Moulinette Functions
   - [ ] hiddenservice_add (name, ports[])
   - [ ] hiddenservice_list (returns: (domain, name, ports[]))
   - [ ] hiddenservice_update (domain, name, ports[])
   - [ ] hiddenservice_delete (domain)
+
+## Future
 - [ ] Mailserver for "public" use
   - [ ] [Only accept onion domains as receivers](https://www.linuxquestions.org/questions/linux-server-73/how-to-reject-addresses-by-tld-in-postfix-678757/)
     * https://www.bentasker.co.uk/documentation/linux/161-configuring-postfix-to-block-outgoing-mail-to-all-but-one-domain
     * http://www.linuxmail.info/postfix-restrict-sender-recipient/
-- [ ] WifiHotspot with \*.local domain
+- [ ] VoIP
 
 
 
