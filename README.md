@@ -84,6 +84,7 @@ Version: 0.1.0
 - [ ] VoIP
 - [ ] Own debian repo
 - [ ] Own pi image
+- [ ] Stronger ldap-hash algorithm: https://www.redpill-linpro.com/techblog/2016/08/16/ldap-password-hash.html
 
 
 
