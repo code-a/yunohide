@@ -165,10 +165,13 @@ postmap /etc/postfix/transport
 systemctl reload postfix
 
 
+# configure xmpp-server for hidden services only
+# source: https://gist.github.com/xnyhps/33f7de50cf91a70acf93
+# //TODO:
+
 # //TODO: echo_n "Adding YunoHide AppsList"
 # //TODO: install nextcloud+encryption
 # //TODO: install cryptpad
-# //TODO: mailserver configuration
 
 ############################## SERVER INFO ####################################
 echo_g "\n\n\n###################################################"
