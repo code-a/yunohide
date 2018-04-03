@@ -59,6 +59,8 @@ Version: 0.1.0
   - [ ] Cryptpad with own hidden service domain
 - [ ] Full disk encryption
   - [ ] Unlocking using ssh as hidden service
+      - [ ] https://hamy.io/post/0005/remote-unlocking-of-luks-encrypted-root-in-ubuntu-debian/
+      - [ ] hidden service: //TODO:...
 
 
 ## Version 0.4.0
