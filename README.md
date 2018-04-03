@@ -64,6 +64,7 @@ Version: 0.1.0
 
 
 ## Version 0.4.0
+- [ ] Matrix & Synapse
 - [ ] YunoHide-Admin
 - [ ] Encrypted backups with restic
 - [ ] Debian stretch support
@@ -81,6 +82,8 @@ Version: 0.1.0
     * https://www.bentasker.co.uk/documentation/linux/161-configuring-postfix-to-block-outgoing-mail-to-all-but-one-domain
     * http://www.linuxmail.info/postfix-restrict-sender-recipient/
 - [ ] VoIP
+- [ ] Own debian repo
+- [ ] Own pi image
 
 
 
