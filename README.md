@@ -4,6 +4,8 @@ YunoHide configures a fresh installed YunoHost to serve all services as tor hidd
 
 Version: 0.1.0
 
+**Similar Projects:** [Tails Server](https://labs.riseup.net/code/issues/5688)
+
 # Features
   * Apps
     * [ ] Nextcloud
