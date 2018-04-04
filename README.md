@@ -85,7 +85,7 @@ Version: 0.1.0
 - [ ] Own debian repo
 - [ ] Own pi image
 - [ ] Stronger ldap-hash algorithm: https://www.redpill-linpro.com/techblog/2016/08/16/ldap-password-hash.html
-
+- [ ] OpenPGP KeyServer with WKD support: https://gist.github.com/kafene/0a6e259996862d35845784e6e5dbfc79
 
 
 **Tested YunoHost version:**
