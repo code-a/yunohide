@@ -46,7 +46,7 @@ Version: 0.1.0
   - [x] Hidden service ports: XMPP
   - [ ] mod_onions
 
-## Version 0.3.0 - Mai 2018
+## Version 0.3.0 - Juni 2018
 - [ ] Mailserver for "public" use
   - [ ] [Torify Postfix](https://www.void.gr/kargig/blog/2014/05/10/smtp-over-hidden-services-with-postfix/)
   - [ ] [Anonymize Headers](https://www.void.gr/kargig/blog/2013/11/24/anonymize-headers-in-postfix/)
@@ -65,18 +65,25 @@ Version: 0.1.0
       - [ ] hidden service: //TODO:...
 
 
-## Version 0.4.0
+## Version 0.4.0 - September 2018
 - [ ] Matrix & Synapse
 - [ ] YunoHide-Admin
-- [ ] Encrypted backups with restic
 - [ ] Debian stretch support
 
-## Version 0.5.0
+
+## Version 0.5.0 - November 2018
 - [ ] YunoHide Moulinette Functions
   - [ ] hiddenservice_add (name, ports[])
   - [ ] hiddenservice_list (returns: (domain, name, ports[]))
   - [ ] hiddenservice_update (domain, name, ports[])
   - [ ] hiddenservice_delete (domain)
+- [ ] Encrypted backups with restic
+
+## Version 0.6.0 - Januar 2019
+- [ ] Own debian repo
+- [ ] Own pi image
+- [ ] Stronger ldap-hash algorithm: https://www.redpill-linpro.com/techblog/2016/08/16/ldap-password-hash.html
+- [ ] OpenPGP KeyServer with WKD support: https://gist.github.com/kafene/0a6e259996862d35845784e6e5dbfc79
 
 ## Future
 - [ ] Mailserver for "public" use
@@ -84,10 +91,7 @@ Version: 0.1.0
     * https://www.bentasker.co.uk/documentation/linux/161-configuring-postfix-to-block-outgoing-mail-to-all-but-one-domain
     * http://www.linuxmail.info/postfix-restrict-sender-recipient/
 - [ ] VoIP
-- [ ] Own debian repo
-- [ ] Own pi image
-- [ ] Stronger ldap-hash algorithm: https://www.redpill-linpro.com/techblog/2016/08/16/ldap-password-hash.html
-- [ ] OpenPGP KeyServer with WKD support: https://gist.github.com/kafene/0a6e259996862d35845784e6e5dbfc79
+
 
 
 **Tested YunoHost version:**
