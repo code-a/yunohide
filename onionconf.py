@@ -1,33 +1,21 @@
-import argparse
+"""
+A command-line interface for managing tor & hidden services.
+
+usage:
+    onionconf (-h | --help)
+    onionconf hs_list
+    onionconf hs_add [--name=<name>] [--path=<path>] [--enabled=<enabled>] [--portmap=<portmap>]
+    onionconf hs_add_auth 
+    
+    onionconf --version
+"""
+
+
+from docopt import docopt
 import json
 
-def get_args():
-    parser = argparse.ArgumentParser()
-    parser.add_argument(
-        '-c', '--component', type=str, help='Component', required=True
-    )
-    parser.add_argument(
-        '-a', '--action', type=str, help='Action', required=True
-    )
-    parser.add_argument(
-        '-n', '--name', type=str, help='Name', required=False
-    )
-    parser.add_argument(
-        '-p', '--path', type=str, help='Path', required=False
-    )
-    parser.add_argument(
-        '-e', '--enabled', type=bool, help='Enabled', required=False
-    )
-    parser.add_argument(
-        '-pm', '--port_map', type=str, help='Port-Map', required=False
-    )
-    
-
-    args = parser.parse_args()
-
-    return args.action, args.email, args.user, args.pw, args.cert_path
-    
-    def main():
+def main():
+    arguments = docopt(__doc__)
     comp, action = get_args()
 
     if comp == 'hs':
