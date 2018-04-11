@@ -69,6 +69,16 @@
 ## HiddenServicePort x y:z says to redirect requests on port x to the
 ## address y:z.
 
+{% for hs in hs_list %}
+{% if hs['enabled'] == true %}
+## HS-Name: {{ hs['name'] }}
+HiddenServiceDir {{ hs['path'] }}
+{% for port_map in hs['port_map'] %}
+HiddenServicePort {{ port_map['in'] }} 127.0.0.1:{{ port_map['out'] }}
+{% endfor %}
+{% endfor %}
+
+
 #HiddenServiceDir @LOCALSTATEDIR@/lib/tor/hidden_service/
 #HiddenServicePort 80 127.0.0.1:80
 
