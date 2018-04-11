@@ -21,6 +21,10 @@ def is_command(s):
         return False
     return True
 
+def parse_portmap(portmap_string):
+    # //TODO: implement
+
+
 def hs_list():
     try:
         with open("hs_list.json") as json_file:
@@ -29,9 +33,27 @@ def hs_list():
     except Exception as e:
         print(e.message)
 
+def hs_add(arguments):
+    hs = {}
+    hs['name'] = arguments['--name']
+    hs['path'] = arguments['--path']
+    hs['enabled'] = arguments['--enabled']
+    hs['port_maps'] = arguments['--portmap']
+
+    # //TODO: load json and merge new object
+    # //TODO: check if service name already exists
+    with open("hs_list.json", "w") as json_file:
+        #hs_list = json.load(json_file)
+        json.dump(hs, json_file)
+
+def update_torrc():
+    # //TODO: implement
+
 def dispatch_command(arguments, command='fail'):
     if command=='hs_list':
         print(hs_list())
+    elif command=='hs_add':
+        print(hs_add(arguments))
 
 def main():
     arguments = docopt(__doc__)
@@ -48,15 +70,8 @@ def main():
 
 
 
-"""
-def hs_add(name, path, enabled, port_maps, auth_type, auth_info):
-    hs = {}
-    hs['name'] = name
-    hs['path'] = path
-    hs['enabled'] = enabled
-    hs['port_maps'] =
-    with open("hs_list.json") as json_file:
-        hs_list = json.load(json_file)
-"""
+
+
+
 
 main()
