@@ -173,6 +173,7 @@ sudo curl -o "/usr/lib/metronome/modules/mod_onions.lua" "https://hg.prosody.im/
 # retrieve variables
 main_domain=$(cat /etc/yunohost/current_host)
 domain_list=$(sudo yunohost domain list --output-as plain --quiet)
+# //TODO: metronome conf dir path!
 metronome_conf_dir = 
 
 for domain in $domain_list; do
@@ -182,8 +183,8 @@ for domain in $domain_list; do
 done
 
 # //TODO: echo_n "Adding YunoHide AppsList"
-# //TODO: install nextcloud+encryption
-# //TODO: install cryptpad
+# //TODO: add file with version info
+# //TODO: yunohide-admin installation
 
 ############################## SERVER INFO ####################################
 echo_g "\n\n\n###################################################"
