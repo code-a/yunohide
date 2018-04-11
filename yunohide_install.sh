@@ -170,7 +170,16 @@ systemctl reload postfix
 # //TODO: check if the directory is right
 sudo curl -o "/usr/lib/metronome/modules/mod_onions.lua" "https://hg.prosody.im/prosody-modules/raw-file/tip/mod_onions/mod_onions.lua"
 # //TODO: update template for metronome domains: https://github.com/YunoHost/yunohost/blob/1f6a57bc274a7a9c355206615e1ae674061d53b2/data/templates/metronome/domain.tpl.cfg.lua
-# //TODO: update template BEFORE YunoHost postinstall
+# retrieve variables
+main_domain=$(cat /etc/yunohost/current_host)
+domain_list=$(sudo yunohost domain list --output-as plain --quiet)
+metronome_conf_dir = 
+
+for domain in $domain_list; do
+    cat ./templates/metronome/domain.tpl.cfg.lua \
+      | sed "s/{{ domain }}/${domain}/g" \
+      > "${metronome_conf_dir}/${domain}.cfg.lua"
+done
 
 # //TODO: echo_n "Adding YunoHide AppsList"
 # //TODO: install nextcloud+encryption
