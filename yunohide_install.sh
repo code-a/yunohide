@@ -167,6 +167,7 @@ systemctl reload postfix
 
 # configure xmpp-server for hidden services only
 # source: https://gist.github.com/xnyhps/33f7de50cf91a70acf93
+sudo curl -o "/usr/lib/prosody/modules/mod_onions.lua" "https://prosody-modules.googlecode.com/hg/mod_onions/mod_onions.lua"
 # //TODO: update template for metronome domains: https://github.com/YunoHost/yunohost/blob/1f6a57bc274a7a9c355206615e1ae674061d53b2/data/templates/metronome/domain.tpl.cfg.lua
 # //TODO: update template BEFORE YunoHost postinstall
 
