@@ -14,21 +14,38 @@ usage:
 from docopt import docopt
 import json
 
-def main():
-    arguments = docopt(__doc__)
-    comp, action = get_args()
-
-    if comp == 'hs':
-        if action == 'list':
-            return hs_list()
-        if action=='add':
-            
+def is_command(s):
+    if s.startswith('-'):
+        return False
+    if s.startswith('<'):
+        return False
+    return True
 
 def hs_list():
     with open("hs_list.json") as json_file:
         hs_list = json.load(json_file)
         print(hs_list)
 
+def dispatch_command(arguments, command='fail'):
+    if command=='hs_list':
+        print(hs_list())
+
+def main():
+    arguments = docopt(__doc__)
+    version_string = 'alpha'
+    arguments = docopt(__doc__, version=version_string)
+    command = get_first([
+        k for (k, v) in arguments.iteritems()
+        if (v and is_command(k))])
+    try:
+        dispatch_command(arguments, command)
+    except Exception as e:
+        print(e)
+
+            
+
+
+"""
 def hs_add(name, path, enabled, port_maps, auth_type, auth_info):
     hs = {}
     hs['name'] = name
@@ -37,6 +54,6 @@ def hs_add(name, path, enabled, port_maps, auth_type, auth_info):
     hs['port_maps'] = 
     with open("hs_list.json") as json_file:
         hs_list = json.load(json_file)
-        
+"""
 
 main()
