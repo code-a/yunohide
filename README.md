@@ -8,7 +8,7 @@ Version: 0.1.0
 
 # Features
   * Apps
-    * [ ] Nextcloud
+    * [ ] SFTP
     * [ ] Cryptpad
     * [x] Mailserver
     * [ ] XMPP-Server
@@ -42,34 +42,33 @@ Version: 0.1.0
   - [x] ~~Anonymize Headers~~: Users can only access mailserver using tor
   - [x] Only Recipients at server allowed
   - [x] Hidden service ports: SMTP, IMAP, POP3
-- [x] XMPP-Server
-  - [x] Hidden service ports: XMPP
-  - [ ] mod_onions
-
-## Version 0.3.0 - Juni 2018
-- [ ] Mailserver for "public" use
   - [ ] [Torify Postfix](https://www.void.gr/kargig/blog/2014/05/10/smtp-over-hidden-services-with-postfix/)
   - [ ] [Anonymize Headers](https://www.void.gr/kargig/blog/2013/11/24/anonymize-headers-in-postfix/)
     * https://www.bentasker.co.uk/documentation/linux/161-configuring-postfix-to-block-outgoing-mail-to-all-but-one-domain
     * http://www.linuxmail.info/postfix-restrict-sender-recipient/
+- [x] XMPP-Server
+  - [x] Hidden service ports: XMPP
+  - [ ] mod_onions
 - [ ] Own AppsList
-  - [ ] Nextcloud 
-    - [ ] with encryption enabled
-    - [ ] with versioning disabled
-    - [ ] with previews disabled: https://docs.nextcloud.com/server/10/admin_manual/configuration_server/config_sample_php_parameters.html#previews
-    - [ ] with send_mail disabled
+- [ ] Full Disk Encryption with unlock over tor & ssh
+  - [ ] https://hamy.io/post/0005/remote-unlocking-of-luks-encrypted-root-in-ubuntu-debian/
+  - [ ] hidden service: //TODO:...
+
+## Version 0.3.0 - Juni 2018
+- [ ] ~~Mailserver for "public" use~~
+- [ ] Apps
   - [ ] Cryptpad with own hidden service domain
-- [ ] Full disk encryption
-  - [ ] Unlocking using ssh as hidden service
-      - [ ] https://hamy.io/post/0005/remote-unlocking-of-luks-encrypted-root-in-ubuntu-debian/
-      - [ ] hidden service: //TODO:...
+- [ ] YunoHide-Admin: WebPanel for administration
+  
 
 
 ## Version 0.4.0 - September 2018
-- [ ] Matrix & Synapse
-- [ ] YunoHide-Admin
 - [ ] Debian stretch support
-
+- [ ] Encrypted backups with restic
+- [ ] Own debian repo
+- [ ] Own pi image
+- [ ] Stronger ldap-hash algorithm: https://www.redpill-linpro.com/techblog/2016/08/16/ldap-password-hash.html
+- [ ] OpenPGP KeyServer with WKD support: https://gist.github.com/kafene/0a6e259996862d35845784e6e5dbfc79
 
 ## Version 0.5.0 - November 2018
 - [ ] YunoHide Moulinette Functions
@@ -77,13 +76,10 @@ Version: 0.1.0
   - [ ] hiddenservice_list (returns: (domain, name, ports[]))
   - [ ] hiddenservice_update (domain, name, ports[])
   - [ ] hiddenservice_delete (domain)
-- [ ] Encrypted backups with restic
+
 
 ## Version 0.6.0 - Januar 2019
-- [ ] Own debian repo
-- [ ] Own pi image
-- [ ] Stronger ldap-hash algorithm: https://www.redpill-linpro.com/techblog/2016/08/16/ldap-password-hash.html
-- [ ] OpenPGP KeyServer with WKD support: https://gist.github.com/kafene/0a6e259996862d35845784e6e5dbfc79
+
 
 ## Future
 - [ ] Mailserver for "public" use
@@ -91,7 +87,11 @@ Version: 0.1.0
     * https://www.bentasker.co.uk/documentation/linux/161-configuring-postfix-to-block-outgoing-mail-to-all-but-one-domain
     * http://www.linuxmail.info/postfix-restrict-sender-recipient/
 - [ ] VoIP
-
+- [ ] ~~Nextcloud~~ 
+  - [ ] with encryption enabled
+  - [ ] with versioning disabled
+  - [ ] with previews disabled: https://docs.nextcloud.com/server/10/admin_manual/configuration_server/config_sample_php_parameters.html#previews
+  - [ ] with send_mail disabled
 
 
 **Tested YunoHost version:**
