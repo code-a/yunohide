@@ -167,14 +167,15 @@ systemctl reload postfix
 
 # configure xmpp-server for hidden services only
 # source: https://gist.github.com/xnyhps/33f7de50cf91a70acf93
-# //TODO: check if the directory is right
 sudo curl -o "/usr/lib/metronome/modules/mod_onions.lua" "https://hg.prosody.im/prosody-modules/raw-file/tip/mod_onions/mod_onions.lua"
-# //TODO: update template for metronome domains: https://github.com/YunoHost/yunohost/blob/1f6a57bc274a7a9c355206615e1ae674061d53b2/data/templates/metronome/domain.tpl.cfg.lua
+
 # retrieve variables
 main_domain=$(cat /etc/yunohost/current_host)
 domain_list=$(sudo yunohost domain list --output-as plain --quiet)
-# //TODO: metronome conf dir path!
-metronome_conf_dir = 
+# source for paths: https://moncoindu.net/wiki/doku.php?id=yunohost-metronome#configuration_de_metronome
+# /etc/metronome/metronome.cfg.lua
+# /etc/metronome/conf.d/domaine.tld.cfg.lua
+metronome_conf_dir =  '/etc/metronome/conf.d'
 
 for domain in $domain_list; do
     cat ./templates/metronome/domain.tpl.cfg.lua \
