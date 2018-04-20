@@ -42,9 +42,6 @@ Version: 0.1.0
   - [x] ~~Anonymize Headers~~: Users can only access mailserver using tor
   - [x] Only Recipients at server allowed
   - [x] Hidden service ports: SMTP, IMAP, POP3
-  - [ ] [Anonymize Headers](https://www.void.gr/kargig/blog/2013/11/24/anonymize-headers-in-postfix/)
-    * https://www.bentasker.co.uk/documentation/linux/161-configuring-postfix-to-block-outgoing-mail-to-all-but-one-domain
-    * http://www.linuxmail.info/postfix-restrict-sender-recipient/
 - [x] XMPP-Server
   - [x] Hidden service ports: XMPP
   - [x] mod_onions
@@ -91,7 +88,9 @@ Version: 0.1.0
   - [ ] with previews disabled: https://docs.nextcloud.com/server/10/admin_manual/configuration_server/config_sample_php_parameters.html#previews
   - [ ] with send_mail disabled
   - [ ] [Torify Postfix](https://www.void.gr/kargig/blog/2014/05/10/smtp-over-hidden-services-with-postfix/)
-
+  - [ ] [Anonymize Headers](https://www.void.gr/kargig/blog/2013/11/24/anonymize-headers-in-postfix/)
+    * https://www.bentasker.co.uk/documentation/linux/161-configuring-postfix-to-block-outgoing-mail-to-all-but-one-domain
+    * http://www.linuxmail.info/postfix-restrict-sender-recipient/
 **Tested YunoHost version:**
 
   * yunohost-jessie-201701261126-sdraspi-stable.zip
