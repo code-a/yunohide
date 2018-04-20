@@ -48,11 +48,10 @@ Version: 0.1.0
     * http://www.linuxmail.info/postfix-restrict-sender-recipient/
 - [x] XMPP-Server
   - [x] Hidden service ports: XMPP
-  - [ ] mod_onions
+  - [x] mod_onions
 - [ ] Own AppsList
-- [ ] Full Disk Encryption with unlock over tor & ssh
+- [ ] Full Disk Encryption with unlock over ssh
   - [ ] https://hamy.io/post/0005/remote-unlocking-of-luks-encrypted-root-in-ubuntu-debian/
-  - [ ] hidden service: //TODO:...
 
 ## Version 0.3.0 - Juni 2018
 - [ ] ~~Mailserver for "public" use~~
