@@ -7,11 +7,11 @@ Version: 0.1.0
 **Similar Projects:** [Tails Server](https://labs.riseup.net/code/issues/5688)
 
 # Features
+- [x] MailServer
+- [x] XMPP-Server
   * Apps
     * [ ] SFTP
     * [ ] Cryptpad
-    * [x] Mailserver
-    * [ ] XMPP-Server
     * [ ] Zerobin
     * [ ] Custom Web-Apps
     * [ ] Web-Interface
@@ -19,7 +19,7 @@ Version: 0.1.0
     * [x] Main
     * [x] SSH
     * [ ] Cryptpad
-  * Secure setup
+- [x] Secure setup
     * Change root password
     * login using tor
     * Automatic YunoHost postinstall
