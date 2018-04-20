@@ -2,7 +2,7 @@
 
 YunoHide configures a fresh installed YunoHost to serve all services as tor hidden services.
 
-**Projext Status:** experimental & unstable
+**Project Status:** experimental & unstable
 
 **Version:** 0.1.0
 
