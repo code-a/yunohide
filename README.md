@@ -49,7 +49,7 @@ YunoHide configures a fresh installed YunoHost to serve all services as tor hidd
 - [x] XMPP-Server
   - [x] Hidden service ports: XMPP
   - [x] mod_onions
-- [ ] Own AppsList
+- [x] Own AppsList
 - [ ] Full Disk Encryption with unlock over ssh
   - [ ] https://hamy.io/post/0005/remote-unlocking-of-luks-encrypted-root-in-ubuntu-debian/
 
