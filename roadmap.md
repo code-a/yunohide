@@ -3,11 +3,9 @@
 - [x] XMPP-Server
 - [ ] Mumble-Server
   * Apps
-    * [ ] SFTP
-    * [ ] SeaFile?
+    * [ ] Nextcloud
     * [ ] Cryptpad
     * [ ] Zerobin
-    * [ ] Custom Web-Apps
     * [ ] Web-Interface
   * Automatic configuration of 3 hidden services
     * [x] Main
@@ -44,10 +42,10 @@
 
 ## Version 0.3.0 - Juni 2018
 - [ ] ~~Mailserver for "public" use~~
-- [ ] Full Disk Encryption with unlock over ssh
-  - [ ] https://hamy.io/post/0005/remote-unlocking-of-luks-encrypted-root-in-ubuntu-debian/
-  - [ ] https://paxswill.com/blog/2013/11/04/encrypted-raspberry-pi/
-- [ ] OnionConf
+- [ ] ~~Full Disk Encryption with unlock over ssh~~ Too complicated for end-users... only provide apss with at least encryption at rest
+  - [ ] ~~https://hamy.io/post/0005/remote-unlocking-of-luks-encrypted-root-in-ubuntu-debian/~~
+  - [ ] ~~https://paxswill.com/blog/2013/11/04/encrypted-raspberry-pi/~~
+- [ ] ~~OnionConf~~
 - [ ] Apps
   - [ ] Cryptpad with own hidden service domain
 - [ ] YunoHide-Admin: WebPanel for administration
