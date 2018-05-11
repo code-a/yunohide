@@ -1,12 +1,12 @@
 # Features
 - [x] MailServer
 - [x] XMPP-Server
-- [ ] Mumble-Server
+- [ ] gogs for collaborative file editing
+- [ ] Cryptpad 2
   * Apps
-    * [ ] Nextcloud
-    * [ ] Cryptpad
     * [ ] Zerobin
     * [ ] Web-Interface
+
   * Automatic configuration of 3 hidden services
     * [x] Main
     * [x] SSH
@@ -26,6 +26,7 @@
 - [ ] Create 5 Hidden service domains
 - [ ] Apps
   - [ ] Cryptpad with own hidden service domain
+  - [ ] gogs
 - [ ] YunoHide-Admin: WebPanel for administration
   - [ ] Disable Web-Installer
   - [ ] Disable Domain creation
