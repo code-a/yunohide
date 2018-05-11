@@ -1,7 +1,5 @@
 # //TODO: change hostname for avahi zeroconf
 
-# //TODO: start tor after boot: https://www.raspberrypi.org/forums/viewtopic.php?f=28&t=197052&p=1231906#p1231634
-
 ############################## HELPER FUNCTIONS ####################################
 # source: https://misc.flogisoft.com/bash/tip_colors_and_formatting
 # source2: https://gist.github.com/daytonn/8677243
@@ -54,6 +52,7 @@ apt-get install apt-transport-https
 # Tor installation & hidden service creation
 echo_n "Installing tor..."
 sudo apt-get -y install tor
+sudo systemctl enable tor
 
 echo_n "Creating hidden service for ssh access..."
 echo '# Hidden service for ssh' >> /etc/tor/torrc
