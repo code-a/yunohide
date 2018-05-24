@@ -182,9 +182,9 @@ for domain in $domain_list; do
       > "${metronome_conf_dir}/${domain}.cfg.lua"
 done
 
-echo_n "Adding YunoHide AppsList"
-yunohost app removelist yunohost
-yunohost app fetchlist yunohide "https://raw.githubusercontent.com/code-a/yunohide-apps/master/official.json"
+#echo_n "Adding YunoHide AppsList"
+#yunohost app removelist yunohost
+#yunohost app fetchlist yunohide "https://raw.githubusercontent.com/code-a/yunohide-apps/master/official.json"
 # //TODO: add file with version info
 # //TODO: yunohide-admin installation
 
