@@ -1,16 +1,11 @@
 # Features
-- [x] MailServer
-- [x] XMPP-Server
-- [ ] gogs for collaborative file editing
-- [ ] Cryptpad 2
-  * Apps
-    * [ ] Zerobin
-    * [ ] Web-Interface
+- [x] Internal MailServer
+- [x] XMPP-Server with outbound connections over tor(hidden services only)
 
-  * Automatic configuration of 3 hidden services
+  * Automatic configuration of 2 hidden services
     * [x] Main
     * [x] SSH
-    * [ ] Cryptpad
+
 - [x] Secure setup
     * Change root password
     * login using tor
