@@ -98,7 +98,6 @@ sleep 60
 
 hidden_service_ssh="$(cat /var/lib/tor/hidden_service_ssh/hostname)"
 hidden_service_default="$(cat /var/lib/tor/hidden_service_default/hostname)"
-hidden_service_cryptpad="$(cat /var/lib/tor/hidden_service_cryptpad/hostname)"
 
 
 ############################## YUNOHOST POSTINSTALL ####################################
@@ -160,7 +159,7 @@ echo_n "Reloading firewall configuration"
 yunohost firewall reload
 
 # use own service configuration
-wget https://github.com/code-a/yunohide/raw/master/yunohost.conf
+wget https://github.com/code-a/yunohide/raw/master/templates/yunohost.conf
 cp ./yunohost.conf /etc/yunohost/yunohost.conf
 
 # configure mailserver for internal use
