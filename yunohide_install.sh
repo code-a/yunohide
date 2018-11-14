@@ -16,20 +16,21 @@ function echo_g {
     echo -e "${GREEN}${1}${NC}"
 }
 
-function banner { 
+function banner {
     echo_n " __     __                    _    _  _      _       "
-    echo_n " \ \   / /                   | |  | |(_)    | |      "
-    echo_n "  \ \_/ /_   _  _ __    ___  | |__| | _   __| |  ___ "
-    echo_n "   \   /| | | || '_ \  / _ \ |  __  || | / _` | / _ \"
+    echo_n " \\ \\   / /                   | |  | |(_)    | |      "
+    echo_n "  \\ \\_/ /_   _  _ __    ___  | |__| | _   __| |  ___ "
+    echo_n "   \\   /| | | || '_ \\  / _ \\ |  __  || | / _\` | / _ \\ "
     echo_n "    | | | |_| || | | || (_) || |  | || || (_| ||  __/"
-    echo_n "    |_|  \__,_||_| |_| \___/ |_|  |_||_| \__,_| \___|"
+    echo_n "    |_|  \\__,_||_| |_| \\___/ |_|  |_||_| \\__,_| \\___|"
     echo_n " "
-    echo_n "code-a.io/yunohide"
+    echo_g "    code-a.io/yunohide"
     echo " "
 }
 
 # //TODO: automatically generate password
 ############################## PASSWORD SETUP ####################################
+banner
 # Get password for admin account
 echo_n "Enter the password you want to use for your yunohost admin account and the root user"
 read -s -p "Password: " PASSWORD; echo
