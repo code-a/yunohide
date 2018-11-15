@@ -183,9 +183,10 @@ domain_list=$(sudo yunohost domain list --output-as plain --quiet)
 # /etc/metronome/metronome.cfg.lua
 # /etc/metronome/conf.d/domaine.tld.cfg.lua
 metronome_conf_dir =  '/etc/metronome/conf.d'
+wget https://raw.githubusercontent.com/code-a/yunohide/master/templates/metronome/domain.tpl.cfg.lua
 
 for domain in $domain_list; do
-    cat ./templates/metronome/domain.tpl.cfg.lua \
+    cat ./domain.tpl.cfg.lua \
       | sed "s/{{ domain }}/${domain}/g" \
       > "${metronome_conf_dir}/${domain}.cfg.lua"
 done
