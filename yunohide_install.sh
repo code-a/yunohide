@@ -33,18 +33,18 @@ function banner {
 banner
 
 # Get password for admin account
-echo_n "Enter the password you want to use for your yunohost admin account and the root user"
-read -s -p "Password: " PASSWORD; echo
-read -s -p "Confirm Password: " PASSCONFIRM; echo
+#echo_n "Enter the password you want to use for your yunohost admin account and the root user"
+#read -s -p "Password: " PASSWORD; echo
+#read -s -p "Confirm Password: " PASSCONFIRM; echo
 
-if [[ "$PASSWORD" != "$PASSCONFIRM" ]]; then
- echo "Passwords do not match, exiting..."
- echo "Restart this script and try again!"
- exit -1
-fi
+#if [[ "$PASSWORD" != "$PASSCONFIRM" ]]; then
+# echo "Passwords do not match, exiting..."
+# echo "Restart this script and try again!"
+# exit -1
+#fi
 
 # //change root password
-echo root:$PASSWORD | chpasswd
+#echo root:$PASSWORD | chpasswd
 
 
 ############################## SYSTEM UPDATE ####################################
