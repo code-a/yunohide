@@ -169,12 +169,27 @@ hg clone https://hg.prosody.im/prosody-modules/ modules
 
 # configure mailserver for internal use
 # source: https://www.bentasker.co.uk/documentation/linux/161-configuring-postfix-to-block-outgoing-mail-to-all-but-one-domain
-echo 'transport_maps = hash:/etc/postfix/transport' >> /etc/postfix/main.cf
-hs_transport="$hidden_service_default"' :'
-echo hs_transport >> /etc/postfix/transport
-echo '* error: domain not allowed' >> /etc/postfix/transport
-postmap /etc/postfix/transport
-systemctl reload postfix
+# source: http://www.linuxmail.info/postfix-restrict-sender-recipient/
+# source: https://www.linuxquestions.org/questions/linux-server-73/how-to-reject-addresses-by-tld-in-postfix-678757/
+# source: https://serverfault.com/questions/644950/postfix-restrict-communication-inside-domain
+apt-get install -y tor-socks
+echo 'smtpd_recipient_restrictions =
+  check_recipient_access pcre:/etc/postfix/recipient_access,
+  reject_unauth_destinations' >> /etc/postfix/main.cf
+#echo '/\.onion$/           ALLOW' >> /etc/postfix/recipient_access
+echo '!/\.onion/           REJECT' >> /etc/postfix/recipient_access
+
+# //TODO: change default gateway to smtp-over-tor
+# source: http://marcelog.github.io/articles/configure_postfix_forward_all_email_smtp_gateway.html
+# source: https://www.void.gr/kargig/blog/2014/05/10/smtp-over-hidden-services-with-postfix/
+
+# //Archive: Configure internal mailserver
+#echo 'transport_maps = hash:/etc/postfix/transport' >> /etc/postfix/main.cf
+#hs_transport="$hidden_service_default"' :'
+#echo hs_transport >> /etc/postfix/transport
+#echo '* error: domain not allowed' >> /etc/postfix/transport
+#postmap /etc/postfix/transport
+#systemctl reload postfix
 
 
 
