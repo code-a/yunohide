@@ -16,6 +16,16 @@ function echo_g {
     echo -e "${GREEN}${1}${NC}"
 }
 
+function render_template {
+  eval "echo \"$(cat $1)\""
+}
+
+function generate_prosody_conf {
+  echo "#### Creating prosody configuration"
+  render_template ./templates/metronome/metronome.cfg.lua.tmpl > /etc/prosody/prosody.cfg.lua
+}
+
+
 function banner {
     echo_n " __     __                    _    _  _      _       "
     echo_n " \\ \\   / /                   | |  | |(_)    | |      "
@@ -31,20 +41,6 @@ function banner {
 # //TODO: automatically generate password
 ############################## PASSWORD SETUP ####################################
 banner
-
-# Get password for admin account
-#echo_n "Enter the password you want to use for your yunohost admin account and the root user"
-#read -s -p "Password: " PASSWORD; echo
-#read -s -p "Confirm Password: " PASSCONFIRM; echo
-
-#if [[ "$PASSWORD" != "$PASSCONFIRM" ]]; then
-# echo "Passwords do not match, exiting..."
-# echo "Restart this script and try again!"
-# exit -1
-#fi
-
-# //change root password
-#echo root:$PASSWORD | chpasswd
 
 
 ############################## SYSTEM UPDATE ####################################
@@ -98,6 +94,8 @@ sleep 60
 
 hidden_service_ssh="$(cat /var/lib/tor/hidden_service_ssh/hostname)"
 hidden_service_default="$(cat /var/lib/tor/hidden_service_default/hostname)"
+main_domain="$(cat /var/lib/tor/hidden_service_default/hostname)"
+
 
 
 ############################## YUNOHOST POSTINSTALL ####################################
@@ -161,6 +159,13 @@ yunohost firewall reload
 # use own service configuration
 wget https://github.com/code-a/yunohide/raw/master/templates/yunohost.conf
 cp ./yunohost.conf /etc/yunohost/yunohost.conf
+# configure xmpp-server for hidden services only
+# source: https://gist.github.com/xnyhps/33f7de50cf91a70acf93
+apt-get install -y liblua5.1-bitop0 liblua5.1-bitop-dev lua-bitop
+apt-get install -y mercurial
+cd /usr/lib/metronome/
+hg clone https://hg.prosody.im/prosody-modules/ modules
+
 
 # configure mailserver for internal use
 # source: https://www.bentasker.co.uk/documentation/linux/161-configuring-postfix-to-block-outgoing-mail-to-all-but-one-domain
@@ -172,12 +177,10 @@ postmap /etc/postfix/transport
 systemctl reload postfix
 
 
-# configure xmpp-server for hidden services only
-# source: https://gist.github.com/xnyhps/33f7de50cf91a70acf93
-sudo curl -o "/usr/lib/metronome/modules/mod_onions.lua" "https://hg.prosody.im/prosody-modules/raw-file/tip/mod_onions/mod_onions.lua"
+
+
 
 # retrieve variables
-main_domain=$(cat /etc/yunohost/current_host)
 domain_list=$(sudo yunohost domain list --output-as plain --quiet)
 # source for paths: https://moncoindu.net/wiki/doku.php?id=yunohost-metronome#configuration_de_metronome
 # /etc/metronome/metronome.cfg.lua
@@ -191,6 +194,13 @@ for domain in $domain_list; do
       > "${metronome_conf_dir}/${domain}.cfg.lua"
 done
 
+wget https://raw.githubusercontent.com/code-a/yunohide/master/templates/metronome/metronome.cfg.lua
+cat ./metronome.cfg.lua \
+  | sed "s/{{ main_domain }}/${main_domain}/g" \
+  > "${metronome_conf_dir}/metronome.cfg.lua"
+
+# reload metronome
+systemctl metronome reload
 
 
 ############################## SERVER INFO ####################################
@@ -215,9 +225,3 @@ read -rsp $'Press enter to finish setup...\n'
 # //TODO: let user update system using webpanel
 #apt-get install apt-transport-https
 #apt-get upgrade --fix-missing
-
-
-
-
-
-

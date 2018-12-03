@@ -1,19 +1,19 @@
 -- ** Metronome's config file example **
--- 
+--
 -- The format is exactly equal to Prosody's:
 --
--- Lists are written { "like", "this", "one" } 
--- Lists can also be of { 1, 2, 3 } numbers, etc. 
+-- Lists are written { "like", "this", "one" }
+-- Lists can also be of { 1, 2, 3 } numbers, etc.
 -- Either commas, or semi-colons; may be used as seperators.
 --
--- A table is a list of values, except each value has a name. An 
+-- A table is a list of values, except each value has a name. An
 -- example would be:
 --
 -- ssl = { key = "keyfile.key", certificate = "certificate.crt" }
 --
 -- Tip: You can check that the syntax of this file is correct when you have finished
 -- by running: luac -p metronome.cfg.lua
--- If there are any errors, it will let you know what and where they are, otherwise it 
+-- If there are any errors, it will let you know what and where they are, otherwise it
 -- will keep quiet.
 
 ---------- Server-wide settings ----------
@@ -90,6 +90,52 @@ modules_enabled = {
     -- Debian: do not remove this module, or you lose syslog
     -- support
         "posix"; -- POSIX functionality, sends server to background, enables syslog, etc.
+
+        -- Nice to have
+        "legacyauth";
+        "version";
+        "uptime";
+        "time";
+        "ping";
+        --"register_web";
+        --"register";
+        "posix";
+        "bosh";
+        "announce";
+        "proxy65";
+        "pep";
+        "smacks";
+        "carbons";
+        "blocking";
+        "http_upload";
+        "csi";
+        "throttle_presence";
+        "mam";
+        "lastlog";
+        "cloud_notify";
+        "compat_dialback";
+        "admin_web";
+
+        -- additional modules
+        "auto_activate_hosts";
+        "c2s_conn_throttle";
+        "c2s_limit_sessions";
+        "csi";
+        "filter_chatstates";
+        "host_guard";
+        "lastlog";
+        "limit_auth";
+        "list_inactive";
+        "log_sasl_mech";
+        "motd_sequential";
+        "omemo_all_access";
+        "reload_modules";
+        "register_redirect";
+        "s2s_auth_compat";
+        "smacks";
+        "throttle_presence";
+        "onions";
+        "conversejs";
 };
 
 -- Discovery items
