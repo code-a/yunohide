@@ -183,6 +183,9 @@ echo '!/\.onion/           REJECT' >> /etc/postfix/recipient_access
 # source: http://marcelog.github.io/articles/configure_postfix_forward_all_email_smtp_gateway.html
 # source: https://www.void.gr/kargig/blog/2014/05/10/smtp-over-hidden-services-with-postfix/
 
+# //TODO: check if headers are anonymized
+# source: https://www.void.gr/kargig/blog/2013/11/24/anonymize-headers-in-postfix/
+
 # //Archive: Configure internal mailserver
 #echo 'transport_maps = hash:/etc/postfix/transport' >> /etc/postfix/main.cf
 #hs_transport="$hidden_service_default"' :'
