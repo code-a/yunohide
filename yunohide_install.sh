@@ -42,6 +42,9 @@ function banner {
 ############################## PASSWORD SETUP ####################################
 banner
 
+############################# For VPS ###########################################
+
+
 
 ############################## SYSTEM UPDATE ####################################
 # Update package list
@@ -88,7 +91,7 @@ echo 'HiddenServicePort 5269 127.0.0.1:5269' >> /etc/tor/torrc
 
 
 echo_n "Restarting tor..."
-service tor restart
+systemctl restart tor
 echo_n "waiting for tor to generate hidden services(60s)"
 sleep 60
 
