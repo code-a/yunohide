@@ -112,7 +112,7 @@ main_domain="$(cat /var/lib/tor/hidden_service_default/hostname)"
 
 ############################## YUNOHOST POSTINSTALL ####################################
 echo_n "Starting YunoHost post-install..."
-yunohost tools postinstall -d "$hidden_service_default" -p "$PASSWORD" --ignore-dyndns
+yunohost tools postinstall -d "$hidden_service_default" -p "$PASSWORD" --ignore-dyndns --force-password
 
 ############################## FIREWALL UPDATE ####################################
 # update firewall settings
