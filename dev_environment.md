@@ -6,7 +6,7 @@ sudo passwd root
 
 su -
 
-bash <(wget -q -O- https://install.yunohost.org/) -f -a
+      //bash <(wget -q -O- https://install.yunohost.org/) -f -a
 
 wget https://github.com/code-a/yunohide/raw/master/yunohide_install.sh
 

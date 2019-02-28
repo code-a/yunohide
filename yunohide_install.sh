@@ -54,21 +54,25 @@ if [[ "$PASSWORD" != "$PASSCONFIRM" ]]; then
 fi
 
 
-
 ############################## SYSTEM UPDATE ####################################
 # Update package list
 echo_n "updating package list"
 apt-get -y update
 
 # //TODO: upgrade
-#echo_n "upgrading packages"
-#apt-get -y upgrade
-#echo_n "dist-upgrade"
-#apt-get -y dist-upgrade
+echo_n "upgrading packages"
+apt-get -y upgrade
+echo_n "dist-upgrade"
+apt-get -y dist-upgrade
 
 
 echo_n "Installing apt-transport-https"
 apt-get install apt-transport-https
+
+############################## INSTALL YUNOHOST #################################
+echo "Install YunoHost"
+apt-get install -y wget
+bash <(wget -q -O- https://install.yunohost.org/) -f -a
 
 
 ############################## HIDDEN SERVICE CONFIGURATION ####################################
@@ -191,9 +195,25 @@ echo 'smtpd_recipient_restrictions =
 #echo '/\.onion$/           ALLOW' >> /etc/postfix/recipient_access
 echo '!/\.onion/           REJECT' >> /etc/postfix/recipient_access
 
-# //TODO: change default gateway to smtp-over-tor
+# change default gateway to smtp-over-tor
+# //TODO: test it!
 # source: http://marcelog.github.io/articles/configure_postfix_forward_all_email_smtp_gateway.html
 # source: https://www.void.gr/kargig/blog/2014/05/10/smtp-over-hidden-services-with-postfix/
+cp ./bin/smtp_tor /usr/lib/postfix/smtp_tor
+chmod +x /usr/lib/postfix/smtp_tor
+echo "smtptor      unix  -       -       -       -       -       smtp_tor\
+  -o smtp_dns_support_level=disabled" >> /etc/postfix/master.cf
+
+echo "\
+transport_maps = hash:/etc/postfix/transport \
+" >> /etc/postfix/main.cf
+
+echo "\
+*        smtptor:localhost\
+" >> /etc/postfix/transport
+
+postmap hash:/etc/postfix/transport
+postfix reload
 
 # //TODO: check if headers are anonymized
 # source: https://www.void.gr/kargig/blog/2013/11/24/anonymize-headers-in-postfix/
