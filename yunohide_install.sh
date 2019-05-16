@@ -54,6 +54,18 @@ banner
 #fi
 
 
+############################## RESIZE FS ########################################
+
+# source: https://github.com/YunoHost/rpi-image/blob/yunohost-stretch/stage3/00-install-yunohost/files/check_yunohost_is_installed.sh
+# Trigger resize2fs_once in case it wasnt triggered so far ...
+    if [ -f "/etc/init.d/resize2fs_once" ];
+    then
+        systemctl restart resize2fs_once
+    fi
+
+
+
+
 ############################## SYSTEM UPDATE ####################################
 # Update package list
 echo_n "updating package list"
