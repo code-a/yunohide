@@ -80,6 +80,9 @@ ROOT_PASSWORD="$(diceware -n 9 -w en_eff)"
 # change root password
 echo root:"${ROOT_PASSWORD}" | chpasswd
 
+# allow ssh login for root
+sed -i '/PermitRootLogin/c\PermitRootLogin yes' /etc/ssh/sshd_config
+
 # //TODO: delete user named pi
 
 ############################## INSTALL YUNOHOST #################################
