@@ -3,6 +3,7 @@
 # source: https://github.com/YunoHost/rpi-image/blob/yunohost-stretch/stage3/00-install-yunohost/00-run.sh
 # //TODO: use other path to run script at first start:
 # https://www.raspberrypi.org/forums/viewtopic.php?t=189676
+# //TODO: !!!!! use rc.local !!!!!! https://wiki.ubuntuusers.de/rc.local/
 
 ############################## HELPER FUNCTIONS ####################################
 # source: https://misc.flogisoft.com/bash/tip_colors_and_formatting
