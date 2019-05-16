@@ -101,7 +101,7 @@ then
     ############################## INSTALL YUNOHOST #################################
     echo "Install YunoHost"
     apt-get install -y wget
-    bash <(wget -q -O- https://install.yunohost.org/) -f -a
+    bash <(wget -q -O- https://install.yunohost.org/stretch) -f -a
 
 
     ############################## HIDDEN SERVICE CONFIGURATION ####################################
@@ -145,7 +145,7 @@ then
 
     ############################## YUNOHOST POSTINSTALL ####################################
     echo_n "Starting YunoHost post-install..."
-    yunohost tools postinstall -d "$hidden_service_default" -p "$PASSWORD" --ignore-dyndns --force-password
+    yunohost tools postinstall -d "$hidden_service_default" -p "{$ADMIN_PASSWORD}" --ignore-dyndns --force-password
 
     ############################## FIREWALL UPDATE ####################################
     # update firewall settings
