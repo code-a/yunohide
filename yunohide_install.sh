@@ -1,6 +1,8 @@
 # Copy this file to the right directory:
 # install -m 755 files/check_yunohost_is_installed.sh "${ROOTFS_DIR}/etc/profile.d/"
 # source: https://github.com/YunoHost/rpi-image/blob/yunohost-stretch/stage3/00-install-yunohost/00-run.sh
+# //TODO: use other path to run script at first start:
+# https://www.raspberrypi.org/forums/viewtopic.php?t=189676
 
 ############################## HELPER FUNCTIONS ####################################
 # source: https://misc.flogisoft.com/bash/tip_colors_and_formatting
