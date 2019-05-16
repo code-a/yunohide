@@ -77,11 +77,10 @@ ADMIN_PASSWORD="$(diceware -n 9 -w en_eff)"
 ROOT_PASSWORD="$(diceware -n 9 -w en_eff)"
 
 
-# change root account name
-
-
 # change root password
 echo root:"${ROOT_PASSWORD}" | chpasswd
+
+# //TODO: delete user named pi
 
 ############################## INSTALL YUNOHOST #################################
 echo "Install YunoHost"
