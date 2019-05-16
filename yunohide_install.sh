@@ -77,6 +77,11 @@ ADMIN_PASSWORD="$(diceware -n 9 -w en_eff)"
 ROOT_PASSWORD="$(diceware -n 9 -w en_eff)"
 
 
+# change root account name
+
+
+# change root password
+echo root:"${ROOT_PASSWORD}" | chpasswd
 
 ############################## INSTALL YUNOHOST #################################
 echo "Install YunoHost"
