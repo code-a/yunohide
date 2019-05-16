@@ -43,15 +43,15 @@ function banner {
 banner
 
 # Get password for admin account
-echo_n "Enter the password you want to use for your yunohost admin account and the root user"
-read -s -p "Password: " PASSWORD; echo
-read -s -p "Confirm Password: " PASSCONFIRM; echo
+#echo_n "Enter the password you want to use for your yunohost admin account and the root user"
+#read -s -p "Password: " PASSWORD; echo
+#read -s -p "Confirm Password: " PASSCONFIRM; echo
 
-if [[ "$PASSWORD" != "$PASSCONFIRM" ]]; then
- echo "Passwords do not match, exiting..."
- echo "Restart this script and try again!"
- exit -1
-fi
+#if [[ "$PASSWORD" != "$PASSCONFIRM" ]]; then
+# echo "Passwords do not match, exiting..."
+# echo "Restart this script and try again!"
+# exit -1
+#fi
 
 
 ############################## SYSTEM UPDATE ####################################
@@ -59,15 +59,24 @@ fi
 echo_n "updating package list"
 apt-get -y update
 
-# //TODO: upgrade
+# // upgrade
 echo_n "upgrading packages"
 apt-get -y upgrade
-echo_n "dist-upgrade"
-apt-get -y dist-upgrade
+#echo_n "dist-upgrade"
+#apt-get -y dist-upgrade
 
 
 echo_n "Installing apt-transport-https"
-apt-get install apt-transport-https
+apt-get install -y apt-transport-https
+
+############################# SET ADMIN & ROOT PASSWORD ####################
+
+apt-get install -y diceware
+
+ADMIN_PASSWORD="$(diceware -n 9 -w en_eff)"
+ROOT_PASSWORD="$(diceware -n 9 -w en_eff)"
+
+
 
 ############################## INSTALL YUNOHOST #################################
 echo "Install YunoHost"
